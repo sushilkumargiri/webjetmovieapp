@@ -1,0 +1,7 @@
+C:\Users\sushil\Desktop\Projects\WebjetMovieApp\WebjetMovieAppBL\bin\Debug\WebjetMovieAppBL.dll
+C:\Users\sushil\Desktop\Projects\WebjetMovieApp\WebjetMovieAppBL\bin\Debug\WebjetMovieAppBL.pdb
+C:\Users\sushil\Desktop\Projects\WebjetMovieApp\WebjetMovieAppBL\bin\Debug\log4net.dll
+C:\Users\sushil\Desktop\Projects\WebjetMovieApp\WebjetMovieAppBL\bin\Debug\log4net.xml
+C:\Users\sushil\Desktop\Projects\WebjetMovieApp\WebjetMovieAppBL\obj\Debug\WebjetMovieAppBL.csprojResolveAssemblyReference.cache
+C:\Users\sushil\Desktop\Projects\WebjetMovieApp\WebjetMovieAppBL\obj\Debug\WebjetMovieAppBL.dll
+C:\Users\sushil\Desktop\Projects\WebjetMovieApp\WebjetMovieAppBL\obj\Debug\WebjetMovieAppBL.pdb

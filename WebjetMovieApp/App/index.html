@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="en" ng-app="moviecatApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Google movie Gallery</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="app.animations.css" />
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="app.animations.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/checkmark/checkmark.filter.js"></script>
+    <script src="core/movie/movie.module.js"></script>
+    <script src="core/movie/movie.service.js"></script>
+    <script src="movie-list/movie-list.module.js"></script>
+    <script src="movie-list/movie-list.component.js"></script>
+    <script src="movie-detail/movie-detail.module.js"></script>
+    <script src="movie-detail/movie-detail.component.js"></script>
+  </head>
+  <body>
+
+    <div class="view-container">
+      <div ng-view class="view-frame"></div>
+    </div>
+
+  </body>
+</html>

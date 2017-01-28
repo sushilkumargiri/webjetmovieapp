@@ -1,0 +1,44 @@
+<div ng-init="$ctrl.LoadList()">
+    <h2>Movies</h2>
+    <hr />
+    <div ng-show="$ctrl.loading">
+        <div>
+            <i class="fa fa-spinner"></i> Loading..
+        </div>
+        <div ng-if="($ctrl.movies.length<1 && !$ctrl.loading) || $ctrl.timeExceeded>20">
+            <span ng-if="$ctrl.timeExceeded>20">Looks like server is taking too long..</span>
+            <a class="btn btn-default" ng-click="$ctrl.LoadList()">Retry</a>
+        </div>
+    </div>
+    <div ng-show="!$ctrl.loading">
+        <div class="row">
+            <div class="col-md-2">Search: </div>
+            <div class="col-md-6"><input class="form-control" ng-model="$ctrl.query" placeholder="Search by Type, Title, Year.." /></div>
+            <div class="col-md-4 pull-right">
+                <a class="btn btn-primary" ng-click="$ctrl.FindCheapestMovie()"><i class="fa fa-search"></i> Find Cheapest Movie</a>
+                <a class="btn btn-default" ng-click="$ctrl.LoadList()">Reset</a>
+            </div>
+        </div>
+        <br />
+        <div class="well" ng-repeat="movie in $ctrl.movies | filter:$ctrl.query">
+            <div class="row">
+                <div class="col-md-4">
+                    <img ng-src="{{movie.Poster}}" alt="Image Not Found" height="120" />
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-9 text-danger"><span ng-bind="movie.Title"></span></div>
+                        <div class="col-md-3 pull-right" ng-if="movie.Price">
+                            <label class="label label-danger" type="button" style="font-size:20px;">
+                                Price: $<span ng-bind="movie.Price"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row"><div class="col-md-12"><span ng-bind="movie.Type"></span></div></div>
+                    <div class="row"><div class="col-md-12"><span ng-bind="movie.Year"></span></div></div>
+                    <div class="row"><div class="col-md-12"><a class="btn btn-warning" ng-href="#!/movies/{{movie.ID}}">View Movie Detail</a></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

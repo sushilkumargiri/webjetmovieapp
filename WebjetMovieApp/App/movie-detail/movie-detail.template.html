@@ -1,0 +1,38 @@
+<h2>Movie Detail</h2>
+<hr />
+<a href="#!/movies" class="btn btn-default"><i class="glyphicon glyphicon-backward"></i>Go Back</a>
+<br />
+<br />
+<div ng-show="$ctrl.loading">
+    <div>
+        <i class="fa fa-spinner"></i> Loading..
+    </div>
+    <div ng-if="$ctrl.timer>10">
+        <a class="btn btn-default">Retry</a>
+    </div>
+</div>
+<div class="row well" ng-show="!$ctrl.loading">
+    <div class="col-md-8">
+        <div class="row form-group"><div class="col-md-2 text-info">Title</div> <div class="col-md-8 text-danger"><span ng-bind="$ctrl.movie.Title"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Type</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Type"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Year</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Year"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Rated</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Rated"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Released</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Released"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Runtime</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Runtime"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Genre</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Genre"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Director</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Director"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Writer</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Writer"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Actors</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Actors"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Plot</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Plot"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Language</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Language"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Country</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Country"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Metascore</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Metascore"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Rating</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Rating"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Votes</div> <div class="col-md-8"><span ng-bind="$ctrl.movie.Votes"></span></div></div>
+        <div class="row form-group"><div class="col-md-2 text-info">Price</div> <div class="col-md-8">$<span ng-bind="$ctrl.movie.Price"></span></div></div>
+    </div>
+    <div class="col-md-4">
+        <img ng-src="{{$ctrl.movie.Poster}}" />
+    </div>
+</div>
+<hr />
